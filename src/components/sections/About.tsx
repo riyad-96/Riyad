@@ -33,11 +33,10 @@ export default function About() {
                 <p className="text-base leading-relaxed text-neutral-600 sm:text-lg">
                   My approach focuses on creating clean, efficient solutions
                   that prioritize functionality and user experience over
-                  unnecessary complexity. With a passion for minimal design and
-                  robust code architecture, I build web applications that are
-                  both beautiful and performant. I also contribute to the
-                  open-source community by creating developer tools that solve
-                  real problems.
+                  unnecessary complexity. I build web apps that are simple,
+                  fast, and reliable, with clean design and smart code. I also
+                  make tools that help developers get things done without the
+                  headache.
                 </p>
               </div>
 
