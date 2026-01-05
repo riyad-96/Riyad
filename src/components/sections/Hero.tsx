@@ -64,7 +64,7 @@ export default function Hero() {
                 {/* Placeholder pattern - you can replace with actual image */}
                 <img
                   src="/no-bg.png"
-                  className="size-full object-cover object-center grayscale-100"
+                  className="size-full object-cover brightness-115 object-center grayscale-100"
                 />
 
                 {/* Diagonal lines pattern overlay */}
