@@ -96,7 +96,7 @@ function NavLink({ onClick, children }: NavLinkProps) {
       onClick={onClick}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
-      className="px-2.5 py-1 font-mono text-sm transition-colors pointer-fine:hover:text-neutral-500 md:px-3.5"
+      className="px-2 py-1 font-mono text-sm transition-colors max-sm:text-sm md:px-3.5 pointer-fine:hover:text-neutral-500"
     >
       {displayText}
     </button>
