@@ -1,0 +1,73 @@
+import { Code2, Braces, Server, Palette, GitBranch } from 'lucide-react';
+
+export default function About() {
+  const skills = [
+    { name: 'React', icon: Code2 },
+    { name: 'TypeScript', icon: Code2 },
+    { name: 'JavaScript (ES6+)', icon: Braces },
+    { name: 'Node.js', icon: Server },
+    { name: 'Tailwind CSS', icon: Palette },
+    { name: 'Git & GitHub', icon: GitBranch },
+  ];
+
+  return (
+    <section id="about" className="min-h-screen bg-neutral-50 py-20 px-4 md:px-6">
+      <div className="mx-auto w-full max-w-6xl">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-3">
+            <div className="lg:sticky lg:top-32">
+              <h2 className="mb-4 text-4xl tracking-tight sm:text-5xl">
+                About
+              </h2>
+              <div className="h-px w-16 bg-black"></div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-9">
+            <div className="space-y-16">
+              <div className="space-y-6">
+                <p className="border-l-2 border-black pl-6 text-xl leading-relaxed sm:text-2xl md:text-3xl">
+                  I'm a web developer who believes in the power of simplicity.
+                </p>
+
+                <p className="text-base leading-relaxed text-neutral-600 sm:text-lg">
+                  My approach focuses on creating clean, efficient solutions
+                  that prioritize functionality and user experience over
+                  unnecessary complexity. With a passion for minimal design and
+                  robust code architecture, I build web applications that are
+                  both beautiful and performant. I also contribute to the
+                  open-source community by creating developer tools that solve
+                  real problems.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="mb-6 text-xl tracking-wide text-neutral-500 uppercase">
+                  Technical Skills
+                </h3>
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  {skills.map((skill, index) => (
+                    <div
+                      key={skill.name}
+                      className="group border border-neutral-300 p-5 transition-all duration-150 hover:border-black"
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <skill.icon className="h-5 w-5 text-neutral-500" />
+                          {skill.name}
+                        </div>
+                        <div className="text-xs text-neutral-400 group-hover:text-neutral-600">
+                          {String(index + 1).padStart(2, '0')}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
