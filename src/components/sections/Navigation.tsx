@@ -25,7 +25,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection('home')}
-            className="relative transition-colors hover:text-neutral-500"
+            className="relative transition-colors pointer-fine:hover:text-neutral-500"
           >
             <span className="absolute top-1/2 left-1/2 size-10 -translate-1/2"></span>
             R.
@@ -96,7 +96,7 @@ function NavLink({ onClick, children }: NavLinkProps) {
       onClick={onClick}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
-      className="px-2.5 py-1 font-mono text-sm transition-colors hover:text-neutral-500 md:px-3.5"
+      className="px-2.5 py-1 font-mono text-sm transition-colors pointer-fine:hover:text-neutral-500 md:px-3.5"
     >
       {displayText}
     </button>
