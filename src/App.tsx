@@ -9,7 +9,7 @@ import NavigateToTop from './components/ui/navigate-to-top';
 
 export default function App() {
   return (
-    <div className="size-full bg-white text-black">
+    <div className="initial-animation size-full bg-white text-black">
       <Navigation />
       <Hero />
       <About />
