@@ -17,10 +17,8 @@ export default function TooltipPreview() {
               </div>
             }
             key={position}
-            tooltipOptions={{
-              position,
-              hideOnTouch: false,
-            }}
+            position={position}
+            hideOnTouch={false}
           >
             <button className="border border-neutral-800 px-4 py-1.5 text-xs capitalize transition-colors hover:bg-neutral-900">
               {position}
