@@ -113,12 +113,12 @@ export default function Package() {
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
-                href="https://www.npmjs.com/package/kitzo"
+                href="https://kitzo.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-neutral-800 px-6 py-3 text-center text-sm transition-colors hover:bg-white flex items-center gap-2 hover:text-black"
+                className="flex items-center gap-2 border border-neutral-800 px-6 py-3 text-center text-sm transition-colors hover:bg-white hover:text-black"
               >
-                <span>View on NPM</span>
+                <span>Kitzo docs</span>
                 <span>
                   <ArrowUpRight className="h-4 w-4" />
                 </span>
@@ -127,9 +127,20 @@ export default function Package() {
                 href="https://github.com/riyad-96/kitzo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-neutral-800 px-6 py-3 text-center text-sm transition-colors hover:bg-white flex items-center gap-2 hover:text-black"
+                className="flex items-center gap-2 border border-neutral-800 px-6 py-3 text-center text-sm transition-colors hover:bg-white hover:text-black"
               >
                 <span>GitHub Repository</span>
+                <span>
+                  <ArrowUpRight className="h-4 w-4" />
+                </span>
+              </a>
+              <a
+                href="https://www.npmjs.com/package/kitzo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 border border-neutral-800 px-6 py-3 text-center text-sm transition-colors hover:bg-white hover:text-black"
+              >
+                <span>View on NPM</span>
                 <span>
                   <ArrowUpRight className="h-4 w-4" />
                 </span>

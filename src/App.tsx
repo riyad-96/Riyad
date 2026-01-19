@@ -4,7 +4,7 @@ import About from './components/sections/About';
 import Projects from './components/sections/Projects';
 import Package from './components/sections/Package';
 import Contact from './components/sections/Contact';
-import { ToastContainer } from 'kitzo';
+import { Toaster } from 'kitzo';
 import NavigateToTop from './components/ui/navigate-to-top';
 
 export default function App() {
@@ -18,7 +18,8 @@ export default function App() {
       <Contact />
 
       <NavigateToTop />
-      <ToastContainer />
+
+      <Toaster swipeToClose={false} />
     </div>
   );
 }

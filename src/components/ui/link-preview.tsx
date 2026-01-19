@@ -124,14 +124,14 @@ export const LinkPreview = ({
                 <a
                   href={url}
                   target="_blank"
-                  className="block rounded-xl border-2 border-transparent bg-white p-1 shadow hover:border-neutral-200 dark:hover:border-neutral-800"
+                  className="block border-2 border-transparent bg-white p-1 shadow hover:border-neutral-200 dark:hover:border-neutral-800"
                   style={{ fontSize: 0 }}
                 >
                   <img
                     src={isStatic ? imageSrc : src}
                     width={width}
                     height={height}
-                    className="rounded-lg grayscale-100"
+                    className="grayscale-100"
                     alt="preview image"
                   />
                 </a>

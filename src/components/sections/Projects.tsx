@@ -17,6 +17,20 @@ export default function Projects() {
   const projects: Project[] = [
     {
       id: 1,
+      title: 'kitzo',
+      description:
+        'Kitzo is a modular utility library offering finely controlled primitives for toasts and interactions, built with TypeScript for predictable behavior, smooth animations, and full customization.',
+      tech: [
+        'React',
+        'TypeScript'
+      ],
+      year: '2026',
+      imageSrc: '/kitzo-ss.png',
+      liveUrl: 'https://kitzo.vercel.app/',
+      repoUrl: 'https://github.com/riyad-96/kitzo',
+    },
+    {
+      id: 2,
       title: 'CodexSnip',
       description:
         'A code snippet manager where users can save valuable code blocks with broad support for multiple languages and themes. Never search for that snippet again.',
@@ -34,7 +48,7 @@ export default function Projects() {
       repoUrl: 'https://github.com/riyad-96/CodexSnip',
     },
     {
-      id: 2,
+      id: 3,
       title: 'TicketBari',
       description:
         'Online travel ticket purchasing platform with three distinct roles (user, admin, vendor). Features include Stripe payment integration, ticket booking system, vendor management, and fraud detection capabilities.',
@@ -52,7 +66,7 @@ export default function Projects() {
       repoUrl: 'https://github.com/riyad-96/ph-assignment-11-frontend',
     },
     {
-      id: 3,
+      id: 4,
       title: 'BazarioX',
       description:
         'Smart shopping session manager that syncs between local storage and cloud. Unauthorized users can save sessions locally and back them up upon login. Includes comprehensive reporting and admin dashboard.',
@@ -61,17 +75,6 @@ export default function Projects() {
       imageSrc: '/bazariox-ss.png',
       liveUrl: 'https://bazariox.vercel.app/',
       repoUrl: 'https://github.com/riyad-96/BazarioX',
-    },
-    {
-      id: 4,
-      title: 'MindClip',
-      description:
-        'A minimalist note-taking application with trash management. My first React project using Firebase for database and authentication.',
-      tech: ['React', 'Firebase Auth', 'Firebase Database'],
-      year: '2025',
-      imageSrc: 'mindclip-ss.png',
-      liveUrl: 'https://mindclip.vercel.app/',
-      repoUrl: 'https://github.com/riyad-96/MindClip',
     },
   ];
 
@@ -133,7 +136,7 @@ export default function Projects() {
                     isStatic={true}
                     imageSrc={project.imageSrc}
                   >
-                    <span className="group/link inline-flex items-center gap-2 border border-black px-6 py-2 text-sm transition-all duration-300 hover:bg-black hover:text-white">
+                    <span className="pointer-events-none group/link inline-flex items-center gap-2 border border-black px-6 py-2 text-sm transition-all duration-300 hover:bg-black hover:text-white">
                       View Live
                       <ArrowUpRight className="h-4 w-4" />
                     </span>
