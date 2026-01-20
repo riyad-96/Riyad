@@ -28,7 +28,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection('home')}
-            className="relative transition-colors pointer-fine:hover:text-neutral-500"
+            className="relative transition-colors pointer-fine:hover:text-neutral-500 md:text-lg"
           >
             <span className="absolute top-1/2 left-1/2 size-10 -translate-1/2"></span>
             R.
