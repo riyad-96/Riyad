@@ -62,13 +62,13 @@ export default function Hero() {
 
               {/* Profile image container */}
               <div className="relative h-64 w-64 overflow-hidden border-2 border-black bg-white sm:h-72 sm:w-72">
-                {/* Placeholder pattern - you can replace with actual image */}
                 <Image
-                  src="/no-bg.png"
+                  src="/me-no-bg.png"
                   alt="Riyad avatar"
                   width="300"
                   height="300"
-                  className="size-full object-cover object-center brightness-115 grayscale-100"
+                  draggable={false}
+                  className="relative z-2 size-full object-cover object-center brightness-115 grayscale-100 select-none"
                   loading="eager"
                 />
 

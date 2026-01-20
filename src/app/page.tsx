@@ -1,6 +1,6 @@
 import About from '@/components/sections/about/About';
 import Contact from '@/components/sections/contact/Contact';
-import Navigation from '@/components/sections/header/Navigation';
+import Header from '@/components/sections/header/Header';
 import Hero from '@/components/sections/hero/Hero';
 import Package from '@/components/sections/package/Package';
 import Projects from '@/components/sections/projects/Projects';
@@ -10,12 +10,13 @@ import ToasterSubscriber from '@/components/ui/Toaster';
 export default function Home() {
   return (
     <>
-      <Navigation />
+      <Header />
       <Hero />
       <About />
       <Projects />
       <Package />
       <Contact />
+
       <NavigateToTop />
       <ToasterSubscriber />
     </>

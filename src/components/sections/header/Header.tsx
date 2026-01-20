@@ -5,7 +5,7 @@ import scrollToSection from '@/utils/scrollToSection';
 import { useEffect } from 'react';
 import NavBtn from './NavBtn';
 
-export default function Navigation() {
+export default function Header() {
   const { scrolled, setScrolled, addWindowScrollListener } = useGlobalStore();
 
   useEffect(() => {
@@ -18,9 +18,9 @@ export default function Navigation() {
 
   return (
     <header
-      className={`fixed top-0 right-0 left-0 z-50 flex h-17.5 items-center border-b px-4 transition-colors duration-150 md:px-6 ${
+      className={`fixed top-0 right-0 left-0 z-50 flex h-17.5 items-center border-b px-4 backdrop-blur-sm transition-colors duration-150 md:px-6 ${
         scrolled
-          ? 'border-neutral-200 bg-white/90 backdrop-blur-sm'
+          ? 'border-neutral-200 bg-white/90'
           : 'border-transparent bg-white'
       }`}
     >
