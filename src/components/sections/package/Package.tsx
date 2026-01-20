@@ -1,6 +1,6 @@
 import { ArrowUpRight } from 'lucide-react';
-import ToastPreview from '@/components/ui/toast-preview';
-import TooltipPreview from '@/components/ui/tooltip-preview';
+import ToastPreview from '@/components/ui/ToastPreview';
+import TooltipPreview from '@/components/ui/TooltipPreview';
 
 type Feature = {
   id: number;

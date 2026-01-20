@@ -78,13 +78,13 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen scroll-mt-17.5 px-4 py-20 md:px-6"
+      className="min-h-screen bg-white scroll-mt-17.5 px-4 py-20 md:px-6"
     >
       <div className="mx-auto w-full max-w-6xl">
         <div className="mb-16">
           <h2 className="mb-6 text-4xl tracking-tight sm:text-5xl">Projects</h2>
           <p className="max-w-2xl text-base leading-relaxed text-neutral-600 sm:text-lg">
-            A selection of recent work demonstrating full-stack capabilities,
+            A selection of recent work demonstrating MERN-stack capabilities,
             clean architecture, and user-focused solutions.
           </p>
         </div>

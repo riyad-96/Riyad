@@ -1,58 +1,46 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
-type NavLinkProps = {
+export default function NavBtn({
+  text,
+  onClick,
+}: {
+  text: string;
   onClick: () => void;
-  children: string;
-};
-
-export default function NavBtn({ onClick, children }: NavLinkProps) {
-  const [displayText, setDisplayText] = useState(children);
-  const [isHovering, setIsHovering] = useState(false);
-
-  useEffect(() => {
-    if (!isHovering) {
-      (() => {
-        setDisplayText(children);
-      })();
-      return;
-    }
-
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-    let iteration = 0;
-
-    const interval = setInterval(() => {
-      setDisplayText(() =>
-        children
-          .split('')
-          .map((_, index) => {
-            if (index < iteration) {
-              return children[index];
-            }
-            return chars[Math.floor(Math.random() * chars.length)];
-          })
-          .join(''),
-      );
-
-      if (iteration >= children.length) {
-        clearInterval(interval);
-      }
-
-      iteration += 1 / 3;
-    }, 30);
-
-    return () => clearInterval(interval);
-  }, [isHovering, children]);
-
+}) {
   return (
     <button
       onClick={onClick}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
-      className="font-geist-mono px-2 py-1 text-xs transition-colors md:px-3.5 md:text-sm pointer-fine:hover:text-neutral-500"
+      className="group grid place-items-center px-2 py-1 text-xs uppercase transition-colors md:px-3.5 md:text-sm"
     >
-      {displayText}
+      <span className="relative overflow-hidden">
+        <span className="absolute">
+          {text.split('').map((t, i) => (
+            <span
+              key={`u${t}n${i}`}
+              className="inline-block -translate-y-1/1 transition-transform duration-250 group-hover:translate-y-0"
+              style={{
+                transitionDelay: `${i * 15}ms`,
+              }}
+            >
+              {t}
+            </span>
+          ))}
+        </span>
+
+        <span className="">
+          {text.split('').map((t, i) => (
+            <span
+              key={`u${t}n${i}`}
+              className="inline-block transition-transform duration-250 group-hover:translate-y-1/1"
+              style={{
+                transitionDelay: `${i * 15}ms`,
+              }}
+            >
+              {t}
+            </span>
+          ))}
+        </span>
+      </span>
     </button>
   );
 }

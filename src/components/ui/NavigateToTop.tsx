@@ -23,9 +23,10 @@ export default function NavigateToTop() {
   return (
     <button
       onClick={() => scrollToSection('home')}
-      className={`fixed right-4 bottom-4 z-10 grid size-9 place-items-center border bg-white mix-blend-difference transition-opacity duration-150 md:right-6 md:bottom-6 ${isShowingNavigateToTop ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
+      className={`group fixed right-4 bottom-4 z-50 flex size-9 origin-bottom-right items-center justify-center bg-white mix-blend-difference transition-all duration-200 md:right-6 md:bottom-6 md:h-10 md:w-10 ${isShowingNavigateToTop ? 'scale-100 opacity-100' : 'pointer-events-none scale-50 opacity-0'}`}
+      aria-label="Scroll to top"
     >
-      <ChevronUp size="24" />
+      <ChevronUp size={24} strokeWidth={2.5} />
     </button>
   );
 }

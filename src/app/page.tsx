@@ -4,7 +4,7 @@ import Header from '@/components/sections/header/Header';
 import Hero from '@/components/sections/hero/Hero';
 import Package from '@/components/sections/package/Package';
 import Projects from '@/components/sections/projects/Projects';
-import NavigateToTop from '@/components/ui/navigate-to-top';
+import NavigateToTop from '@/components/ui/NavigateToTop';
 import ToasterSubscriber from '@/components/ui/Toaster';
 
 export default function Home() {

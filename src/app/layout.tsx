@@ -14,18 +14,18 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Riyad',
-  description: 'Junior Full-Stack Developer & Open Source Contributor',
+  description: 'Junior MERN-stack Developer & Open Source Contributor',
   openGraph: {
-    title: 'Riyad | Junior Full-Stack Developer',
+    title: 'Riyad | Junior MERN-stack Developer',
     description:
-      'Junior Full-Stack Developer focused on React and modern web UI.',
+      'Junior MERN-stack Developer focused on React and modern web UI.',
     url: 'https://riyad-devfolio.vercel.app',
     siteName: 'Riyad',
     images: [
       {
         url: '/me.png',
-        width: 1200,
-        height: 630,
+        width: 490,
+        height: 490,
         alt: 'Riyad Portfolio Preview',
       },
     ],

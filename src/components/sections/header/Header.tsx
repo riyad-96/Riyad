@@ -34,12 +34,19 @@ export default function Header() {
             R.
           </button>
           <nav className="flex">
-            <NavBtn onClick={() => scrollToSection('about')}>About</NavBtn>
-            <NavBtn onClick={() => scrollToSection('projects')}>
-              Projects
-            </NavBtn>
-            <NavBtn onClick={() => scrollToSection('package')}>Package</NavBtn>
-            <NavBtn onClick={() => scrollToSection('contact')}>Contact</NavBtn>
+            <NavBtn text="about" onClick={() => scrollToSection('about')} />
+            <NavBtn
+              text="projects"
+              onClick={() => scrollToSection('projects')}
+            />
+            <NavBtn
+              text="package"
+              onClick={() => scrollToSection('package')}
+            />
+            <NavBtn
+              text="contact"
+              onClick={() => scrollToSection('contact')}
+            />
           </nav>
         </div>
       </div>

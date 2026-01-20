@@ -2,10 +2,10 @@
 
 import { Tooltip } from 'kitzo';
 
-type positionType = ['top', 'bottom', 'right'];
+type positionType = ['left', 'top', 'bottom', 'right'];
 
 export default function TooltipPreview() {
-  const positions: positionType = ['top', 'bottom', 'right'];
+  const positions: positionType = ['left', 'top', 'bottom', 'right'];
 
   return (
     <div className="mt-6 border-t border-neutral-900 pt-4 text-neutral-300">

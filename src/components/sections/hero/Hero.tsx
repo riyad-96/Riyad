@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden px-4 max-lg:pt-12 md:px-6"
+      className="relative bg-white flex min-h-screen items-center overflow-hidden px-4 max-lg:pt-12 md:px-6"
     >
       {/* Minimal grid pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
@@ -28,7 +28,7 @@ export default function Hero() {
               </h1>
               <div className="mb-6 h-px w-24 bg-black"></div>
               <p className="max-w-xl text-lg text-neutral-700 sm:text-xl md:text-2xl">
-                Junior Full-Stack Developer
+                Junior MERN-stack Developer
                 <br className="hidden sm:block" />& Open Source Contributor
               </p>
             </div>
