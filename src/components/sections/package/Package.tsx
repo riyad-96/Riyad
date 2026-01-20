@@ -1,6 +1,6 @@
 import { ArrowUpRight } from 'lucide-react';
-import ToastPreview from '../ui/toast-preview';
-import TooltipPreview from '../ui/tooltip-preview';
+import ToastPreview from '@/components/ui/toast-preview';
+import TooltipPreview from '@/components/ui/tooltip-preview';
 
 type Feature = {
   id: number;
@@ -116,7 +116,7 @@ export default function Package() {
                 href="https://kitzo.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 border border-neutral-800 px-6 py-3 text-center text-sm transition-colors hover:bg-white hover:text-black"
+                className="flex items-center gap-2 border border-neutral-800 px-6 py-3 text-center text-sm transition-colors pointer-fine:hover:bg-white pointer-fine:hover:text-black"
               >
                 <span>Kitzo docs</span>
                 <span>
@@ -127,7 +127,7 @@ export default function Package() {
                 href="https://github.com/riyad-96/kitzo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 border border-neutral-800 px-6 py-3 text-center text-sm transition-colors hover:bg-white hover:text-black"
+                className="flex items-center gap-2 border border-neutral-800 px-6 py-3 text-center text-sm transition-colors pointer-fine:hover:bg-white pointer-fine:hover:text-black"
               >
                 <span>GitHub Repository</span>
                 <span>
@@ -138,7 +138,7 @@ export default function Package() {
                 href="https://www.npmjs.com/package/kitzo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 border border-neutral-800 px-6 py-3 text-center text-sm transition-colors hover:bg-white hover:text-black"
+                className="flex items-center gap-2 border border-neutral-800 px-6 py-3 text-center text-sm transition-colors pointer-fine:hover:bg-white pointer-fine:hover:text-black"
               >
                 <span>View on NPM</span>
                 <span>

@@ -1,3 +1,5 @@
+'use client';
+
 import { toast } from 'kitzo';
 import { X } from 'lucide-react';
 
@@ -14,20 +16,20 @@ export default function ToastPreview() {
                   <span className="text-sm">Toast Message</span>
                   <button
                     onClick={dismiss}
-                    className="grid size-6 place-items-center bg-neutral-100 hover:bg-neutral-200"
+                    className="grid size-6 place-items-center bg-neutral-100 pointer-fine:hover:bg-neutral-200"
                   >
                     <X size="16" />
                   </button>
                 </div>
               ),
               {
-                duration: 8000,
+                duration: 5000,
                 position:
                   window.innerWidth <= 500 ? 'top-right' : 'bottom-left',
               },
             )
           }
-          className="border border-neutral-800 px-4 py-1.5 text-xs transition-colors hover:bg-neutral-900"
+          className="border border-neutral-800 px-4 py-1.5 text-xs transition-colors pointer-fine:hover:bg-neutral-900"
         >
           Toast it
         </button>

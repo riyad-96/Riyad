@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --font-inter: var(--inter);
+  --font-geist-mono: var(--geist-mono);
+}
+
+* {
+  scrollbar-width: thin;
+}
+
+@media (pointer: fine) {
+  button {
+    cursor: pointer;
+  }
+}

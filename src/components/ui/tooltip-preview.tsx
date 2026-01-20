@@ -1,3 +1,5 @@
+'use client';
+
 import { Tooltip } from 'kitzo';
 
 type positionType = ['top', 'bottom', 'right'];
@@ -20,7 +22,7 @@ export default function TooltipPreview() {
             position={position}
             hideOnTouch={false}
           >
-            <button className="border border-neutral-800 px-4 py-1.5 text-xs capitalize transition-colors hover:bg-neutral-900">
+            <button className="border border-neutral-800 px-4 py-1.5 text-xs capitalize transition-colors pointer-fine:hover:bg-neutral-900">
               {position}
             </button>
           </Tooltip>

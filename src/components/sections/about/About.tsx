@@ -11,7 +11,10 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="min-h-screen bg-neutral-50 py-20 px-4 md:px-6">
+    <section
+      id="about"
+      className="min-h-screen scroll-mt-17.5 bg-neutral-50 px-4 py-20 md:px-6"
+    >
       <div className="mx-auto w-full max-w-6xl">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-3">
@@ -27,7 +30,8 @@ export default function About() {
             <div className="space-y-16">
               <div className="space-y-6">
                 <p className="border-l-2 border-black pl-6 text-xl leading-relaxed sm:text-2xl md:text-3xl">
-                  I'm a web developer who believes in the power of simplicity.
+                  I&apos;m a web developer who believes in the power of
+                  simplicity.
                 </p>
 
                 <p className="text-base leading-relaxed text-neutral-600 sm:text-lg">
@@ -48,14 +52,14 @@ export default function About() {
                   {skills.map((skill, index) => (
                     <div
                       key={skill.name}
-                      className="group border border-neutral-300 p-5 transition-all duration-150 hover:border-black"
+                      className="group border border-neutral-300 p-5 transition-all duration-150 pointer-fine:hover:border-black"
                     >
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
                           <skill.icon className="h-5 w-5 text-neutral-500" />
                           {skill.name}
                         </div>
-                        <div className="text-xs text-neutral-400 group-hover:text-neutral-600">
+                        <div className="text-xs text-neutral-400 pointer-fine:group-hover:text-neutral-600">
                           {String(index + 1).padStart(2, '0')}
                         </div>
                       </div>

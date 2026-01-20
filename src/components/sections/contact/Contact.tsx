@@ -1,9 +1,7 @@
-import { useState } from 'react';
-import { Mail, Github, Linkedin, Copy, Check } from 'lucide-react';
+import { Mail, Github, Linkedin } from 'lucide-react';
+import CopyButton from './CopyButton';
 
 export default function Contact() {
-  const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
-
   const contactLinks = [
     {
       label: 'Email',
@@ -28,20 +26,17 @@ export default function Contact() {
     },
   ];
 
-  const handleCopy = (text: string, index: number) => {
-    navigator.clipboard.writeText(text);
-    setCopiedIndex(index);
-    setTimeout(() => setCopiedIndex(null), 2000);
-  };
-
   return (
-    <section id="contact" className="min-h-screen bg-neutral-50 px-4 md:px-6 py-20">
+    <section
+      id="contact"
+      className="min-h-screen scroll-mt-17.5 bg-neutral-50 px-4 pt-30 pb-20 md:px-6"
+    >
       <div className="mx-auto w-full max-w-6xl">
         <div className="mb-16">
           <h2 className="mb-6 text-4xl tracking-tight sm:text-5xl">Contact</h2>
           <p className="max-w-2xl text-base leading-relaxed text-neutral-600 sm:text-lg">
-            Let's work together. Feel free to reach out for collaborations or
-            just a friendly hello.
+            Let&rsquo;s work together. Feel free to reach out for collaborations
+            or just a friendly hello.
           </p>
         </div>
 
@@ -49,7 +44,7 @@ export default function Contact() {
           {contactLinks.map((link, index) => (
             <div
               key={link.label}
-              className="group transition-colors hover:bg-neutral-50"
+              className="group transition-colors pointer-fine:hover:bg-neutral-50"
             >
               <div className="flex items-stretch">
                 <div className="flex w-16 items-center justify-center border-r border-neutral-200 text-lg text-neutral-400 sm:w-20 sm:text-xl">
@@ -71,17 +66,7 @@ export default function Contact() {
                     </div>
                   </div>
                 </a>
-                <button
-                  onClick={() => handleCopy(link.copyValue, index)}
-                  className="flex w-12 items-center justify-center border-l border-neutral-200 text-sm transition-all duration-300 hover:bg-black hover:text-white sm:w-16"
-                  title="Copy to clipboard"
-                >
-                  {copiedIndex === index ? (
-                    <Check size="16" />
-                  ) : (
-                    <Copy size="16" />
-                  )}
-                </button>
+                <CopyButton text={link.href} />
               </div>
             </div>
           ))}

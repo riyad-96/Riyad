@@ -1,5 +1,5 @@
 import { GithubSvg } from '@/assets/Svgs';
-import { LinkPreview } from '../ui/link-preview';
+import LinkPreview from '@/components/ui/LinkPreview';
 import { ArrowUpRight } from 'lucide-react';
 
 type Project = {
@@ -20,10 +20,7 @@ export default function Projects() {
       title: 'kitzo',
       description:
         'Kitzo is a modular utility library offering finely controlled primitives for toasts and interactions, built with TypeScript for predictable behavior, smooth animations, and full customization.',
-      tech: [
-        'React',
-        'TypeScript'
-      ],
+      tech: ['React', 'TypeScript'],
       year: '2026',
       imageSrc: '/kitzo-ss.png',
       liveUrl: 'https://kitzo.vercel.app/',
@@ -70,7 +67,7 @@ export default function Projects() {
       title: 'BazarioX',
       description:
         'Smart shopping session manager that syncs between local storage and cloud. Unauthorized users can save sessions locally and back them up upon login. Includes comprehensive reporting and admin dashboard.',
-      tech: ['React', 'Firebase Auth', 'Firebase Storage'],
+      tech: ['React', 'Firebase Auth', 'Firebase database'],
       year: '2025',
       imageSrc: '/bazariox-ss.png',
       liveUrl: 'https://bazariox.vercel.app/',
@@ -96,12 +93,12 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="group border border-neutral-200 bg-white p-6 transition-all duration-150 hover:border-black sm:p-8"
+              className="group border border-neutral-200 bg-white p-6 transition-all duration-150 pointer-fine:hover:border-black sm:p-8"
             >
               <div className="space-y-4">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                   <div className="flex items-start gap-4">
-                    <span className="text-3xl font-light text-neutral-300 transition-colors group-hover:text-black sm:text-4xl">
+                    <span className="text-3xl font-light text-neutral-300 transition-colors pointer-fine:group-hover:text-black sm:text-4xl">
                       {String(index + 1).padStart(2, '0')}
                     </span>
                     <div className="flex-1">
@@ -136,7 +133,7 @@ export default function Projects() {
                     isStatic={true}
                     imageSrc={project.imageSrc}
                   >
-                    <span className="pointer-events-none group/link inline-flex items-center gap-2 border border-black px-6 py-2 text-sm transition-all duration-300 hover:bg-black hover:text-white">
+                    <span className="group/link pointer-events-none inline-flex items-center gap-2 border border-black px-6 py-2 text-sm transition-all duration-300 pointer-fine:hover:bg-black pointer-fine:hover:text-white">
                       View Live
                       <ArrowUpRight className="h-4 w-4" />
                     </span>
@@ -145,7 +142,7 @@ export default function Projects() {
                   <a
                     href={project.repoUrl}
                     target="_blank"
-                    className="group/repo flex w-12.5 items-center overflow-x-hidden border border-black text-sm transition-[color,background-color,width] duration-[150ms,150ms,300ms] hover:bg-black hover:text-white pointer-fine:hover:w-33.5"
+                    className="group/repo flex w-12.5 items-center overflow-x-hidden border border-black text-sm transition-[color,background-color,width] duration-[150ms,150ms,300ms] pointer-fine:hover:bg-black pointer-fine:hover:text-white pointer-fine:hover:w-33.5"
                   >
                     <span className="px-3">
                       <GithubSvg size="24" />

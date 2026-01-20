@@ -1,3 +1,5 @@
+'use client';
+
 import * as HoverCardPrimitive from '@radix-ui/react-hover-card';
 
 import { encode } from 'qss';
@@ -10,6 +12,7 @@ import {
 } from 'motion/react';
 
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 type LinkPreviewProps = {
   children: React.ReactNode;
@@ -24,7 +27,7 @@ type LinkPreviewProps = {
   | { isStatic?: false; imageSrc?: never }
 );
 
-export const LinkPreview = ({
+export default function LinkPreview({
   children,
   url,
   className,
@@ -32,7 +35,7 @@ export const LinkPreview = ({
   height = 125,
   isStatic = false,
   imageSrc = '',
-}: LinkPreviewProps) => {
+}: LinkPreviewProps) {
   let src;
   if (!isStatic) {
     const params = encode({
@@ -64,10 +67,13 @@ export const LinkPreview = ({
 
   const translateX = useSpring(x, springConfig);
 
-  const handleMouseMove = (event) => {
-    const targetRect = event.target.getBoundingClientRect();
-    const eventOffsetX = event.clientX - targetRect.left;
-    const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2; // Reduce the effect to make it subtle
+  const handleMouseMove = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+  ) => {
+    const target = e.target as HTMLAnchorElement;
+    const targetRect = target.getBoundingClientRect();
+    const eventOffsetX = e.clientX - targetRect.left;
+    const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2;
     x.set(offsetFromCenter);
   };
 
@@ -75,7 +81,13 @@ export const LinkPreview = ({
     <>
       {isMounted ? (
         <div className="hidden">
-          <img src={src} width={width} height={height} alt="hidden image" />
+          <Image
+            src={src}
+            width={200}
+            height={125}
+            alt="hidden image"
+            loading="eager"
+          />
         </div>
       ) : null}
 
@@ -96,6 +108,7 @@ export const LinkPreview = ({
         </HoverCardPrimitive.Trigger>
 
         <HoverCardPrimitive.Content
+          forceMount
           className="origin-(--radix-hover-card-content-transform-origin)"
           side="top"
           align="center"
@@ -116,7 +129,6 @@ export const LinkPreview = ({
                   },
                 }}
                 exit={{ opacity: 0, y: 20, scale: 0.6 }}
-                className="rounded-xl shadow-xl"
                 style={{
                   x: translateX,
                 }}
@@ -124,15 +136,16 @@ export const LinkPreview = ({
                 <a
                   href={url}
                   target="_blank"
-                  className="block border-2 border-transparent bg-white p-1 shadow hover:border-neutral-200 dark:hover:border-neutral-800"
+                  className="block border border-black bg-white p-1"
                   style={{ fontSize: 0 }}
                 >
-                  <img
+                  <Image
                     src={isStatic ? imageSrc : src}
-                    width={width}
-                    height={height}
+                    width={200}
+                    height={125}
                     className="grayscale-100"
                     alt="preview image"
+                    style={{ width: 'auto', height: 'auto' }}
                   />
                 </a>
               </motion.div>
@@ -142,4 +155,4 @@ export const LinkPreview = ({
       </HoverCardPrimitive.Root>
     </>
   );
-};
+}

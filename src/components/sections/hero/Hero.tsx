@@ -1,4 +1,5 @@
-import scrollToSection from '@/utils/scrollToSection';
+import Image from 'next/image';
+import HeroButton from './HeroButton';
 
 export default function Hero() {
   return (
@@ -27,7 +28,7 @@ export default function Hero() {
               </h1>
               <div className="mb-6 h-px w-24 bg-black"></div>
               <p className="max-w-xl text-lg text-neutral-700 sm:text-xl md:text-2xl">
-                Full-Stack Developer
+                Junior Full-Stack Developer
                 <br className="hidden sm:block" />& Open Source Contributor
               </p>
             </div>
@@ -39,18 +40,18 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
-              <button
-                onClick={() => scrollToSection('projects')}
-                className="border border-black px-8 py-3 text-center transition-all duration-300 hover:bg-black hover:text-white"
+              <HeroButton
+                sectionName="projects"
+                className="border border-black px-8 py-3 text-center transition-all duration-300 pointer-fine:hover:bg-black pointer-fine:hover:text-white"
               >
                 View Work
-              </button>
-              <button
-                onClick={() => scrollToSection('package')}
-                className="border border-neutral-300 px-8 py-3 text-center transition-all duration-300 hover:border-black"
+              </HeroButton>
+              <HeroButton
+                sectionName="package"
+                className="border border-neutral-300 px-8 py-3 text-center transition-all duration-300 pointer-fine:hover:border-black"
               >
                 Explore Package
-              </button>
+              </HeroButton>
             </div>
           </div>
 
@@ -62,9 +63,13 @@ export default function Hero() {
               {/* Profile image container */}
               <div className="relative h-64 w-64 overflow-hidden border-2 border-black bg-white sm:h-72 sm:w-72">
                 {/* Placeholder pattern - you can replace with actual image */}
-                <img
+                <Image
                   src="/no-bg.png"
-                  className="size-full object-cover brightness-115 object-center grayscale-100"
+                  alt="Riyad avatar"
+                  width="300"
+                  height="300"
+                  className="size-full object-cover object-center brightness-115 grayscale-100"
+                  loading="eager"
                 />
 
                 {/* Diagonal lines pattern overlay */}
