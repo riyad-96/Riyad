@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative bg-white flex min-h-screen items-center overflow-hidden px-4 max-lg:pt-12 md:px-6"
+      className="relative bg-white flex min-h-screen items-center overflow-hidden px-4 max-lg:pt-8 md:px-6"
     >
       {/* Minimal grid pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
