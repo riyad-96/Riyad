@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
   --font-inter: var(--inter);
@@ -7,11 +8,31 @@
 
 * {
   scrollbar-width: thin;
-  outline: 1px solid solid red;
+}
+
+.dark {
+  scrollbar-color: #6d6d6d #0a0a0a;
 }
 
 @media (pointer: fine) {
   button {
     cursor: pointer;
+  }
+}
+
+::view-transition-old(root) {
+  animation-delay: 700ms;
+}
+
+::view-transition-new(root) {
+  animation: circle-in 700ms;
+}
+
+@keyframes circle-in {
+  from {
+    clip-path: circle(0px at var(--clip-x) var(--clip-y));
+  }
+  to {
+    clip-path: circle(125vmax at var(--clip-x) var(--clip-y));
   }
 }

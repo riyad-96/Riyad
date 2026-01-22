@@ -52,14 +52,14 @@ export default function Package() {
   return (
     <section
       id="package"
-      className="min-h-screen scroll-mt-17.5 bg-black px-4 py-20 text-white md:px-6"
+      className="min-h-screen scroll-mt-17.5 bg-black px-4 py-20 text-white md:px-6 dark:bg-white dark:text-black"
     >
       <div className="mx-auto w-full max-w-6xl">
         <div className="mb-16">
           <h2 className="mb-6 text-4xl tracking-tight sm:text-5xl">
             Open Source
           </h2>
-          <p className="max-w-2xl text-base leading-relaxed text-neutral-400 sm:text-lg">
+          <p className="max-w-2xl text-base leading-relaxed text-neutral-400 sm:text-lg dark:text-neutral-600">
             A comprehensive utility package designed for React developers who
             value performance, flexibility, and clean implementations.
           </p>
@@ -67,26 +67,29 @@ export default function Package() {
 
         <div className="mb-16 space-y-12">
           {features.map((feature, index) => (
-            <div key={feature.id} className="border-t border-neutral-800 pt-8">
+            <div
+              key={feature.id}
+              className="border-t border-neutral-800 pt-8 dark:border-neutral-200"
+            >
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-12">
                 <div className="sm:col-span-2">
-                  <span className="text-5xl font-light text-neutral-700 sm:text-6xl">
+                  <span className="text-5xl font-light text-neutral-700 sm:text-6xl dark:text-neutral-300">
                     {String(index + 1).padStart(2, '0')}
                   </span>
                 </div>
 
                 <div className="space-y-4 sm:col-span-10">
                   <h3 className="text-xl sm:text-2xl">{feature.title}</h3>
-                  <p className="text-sm leading-relaxed text-neutral-400 sm:text-base">
+                  <p className="text-sm leading-relaxed text-neutral-400 sm:text-base dark:text-neutral-600">
                     {feature.description}
                   </p>
                   <ul className="grid grid-cols-1 gap-3 pt-2 md:grid-cols-2">
                     {feature.highlights.map((highlight, idx) => (
                       <li
                         key={idx}
-                        className="flex items-start gap-3 text-sm text-neutral-500"
+                        className="flex items-start gap-3 text-sm text-neutral-500 dark:text-neutral-500"
                       >
-                        <span className="mt-2 h-1 w-1 shrink-0 bg-neutral-600"></span>
+                        <span className="mt-2 h-1 w-1 shrink-0 bg-neutral-600 dark:bg-neutral-400"></span>
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -103,11 +106,11 @@ export default function Package() {
           ))}
         </div>
 
-        <div className="border border-neutral-800 p-6 sm:p-8">
+        <div className="border border-neutral-800 p-6 sm:p-8 dark:border-neutral-200">
           <div className="space-y-6">
             <div>
               <h4 className="mb-3 text-lg sm:text-xl">Install the package</h4>
-              <code className="font-mono text-base text-neutral-400">
+              <code className="font-mono text-base text-neutral-400 dark:text-neutral-600">
                 npm install kitzo
               </code>
             </div>
@@ -116,7 +119,7 @@ export default function Package() {
                 href="https://kitzo.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 border border-neutral-800 px-6 py-3 text-center text-sm transition-colors pointer-fine:hover:bg-white pointer-fine:hover:text-black"
+                className="flex items-center gap-2 border border-neutral-800 px-6 py-3 text-center text-sm dark:border-neutral-200 pointer-fine:hover:bg-white pointer-fine:hover:text-black dark:pointer-fine:hover:bg-black dark:pointer-fine:hover:text-white"
               >
                 <span>Kitzo docs</span>
                 <span>
@@ -127,7 +130,7 @@ export default function Package() {
                 href="https://github.com/riyad-96/kitzo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 border border-neutral-800 px-6 py-3 text-center text-sm transition-colors pointer-fine:hover:bg-white pointer-fine:hover:text-black"
+                className="flex items-center gap-2 border border-neutral-800 px-6 py-3 text-center text-sm dark:border-neutral-200 pointer-fine:hover:bg-white pointer-fine:hover:text-black dark:pointer-fine:hover:bg-black dark:pointer-fine:hover:text-white"
               >
                 <span>GitHub Repository</span>
                 <span>
@@ -138,7 +141,7 @@ export default function Package() {
                 href="https://www.npmjs.com/package/kitzo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 border border-neutral-800 px-6 py-3 text-center text-sm transition-colors pointer-fine:hover:bg-white pointer-fine:hover:text-black"
+                className="flex items-center gap-2 border border-neutral-800 px-6 py-3 text-center text-sm dark:border-neutral-200 pointer-fine:hover:bg-white pointer-fine:hover:text-black dark:pointer-fine:hover:bg-black dark:pointer-fine:hover:text-white"
               >
                 <span>View on NPM</span>
                 <span>

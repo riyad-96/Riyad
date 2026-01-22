@@ -1,15 +1,11 @@
 import type { Metadata } from 'next';
-import { Geist_Mono, Inter } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
+import { cookies } from 'next/headers';
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--inter',
-});
-
-const geistMono = Geist_Mono({
-  subsets: ['latin'],
-  variable: '--geist-mono',
 });
 
 export const metadata: Metadata = {
@@ -37,15 +33,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const theme = cookieStore.get('theme')?.value;
+  const htmlClass = theme === 'dark' ? 'dark' : '';
+
   return (
-    <html lang="en">
+    <html lang="en" className={htmlClass}>
       <body
-        className={`${inter.variable} ${geistMono.variable} font-inter antialiased`}
+        className={`${inter.variable} font-inter bg-white text-black antialiased dark:bg-neutral-950 dark:text-white`}
       >
         {children}
       </body>

@@ -10,7 +10,7 @@ export default function NavBtn({
   return (
     <button
       onClick={onClick}
-      className="group grid place-items-center px-2 py-1 text-xs uppercase transition-colors md:px-3.5 md:text-sm"
+      className="group grid place-items-center px-2 py-1 text-xs uppercase md:px-3.5 md:text-sm"
     >
       <span className="relative overflow-hidden leading-4">
         <span className="absolute">

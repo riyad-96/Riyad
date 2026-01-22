@@ -5,15 +5,15 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative bg-white flex min-h-screen items-center overflow-hidden px-4 max-lg:pt-8 md:px-6"
+      className="relative flex min-h-screen items-center overflow-hidden bg-white px-4 max-lg:pt-8 md:px-6 dark:bg-neutral-950"
     >
       {/* Minimal grid pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 [--line-clr:black] dark:[--line-clr:white]"
           style={{
             backgroundImage:
-              'linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px)',
+              'linear-gradient(to right, var(--line-clr) 1px, transparent 1px), linear-gradient(to bottom, var(--line-clr) 1px, transparent 1px)',
             backgroundSize: '60px 60px',
           }}
         ></div>
@@ -26,14 +26,14 @@ export default function Hero() {
               <h1 className="mb-6 text-5xl tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
                 Riyad
               </h1>
-              <div className="mb-6 h-px w-24 bg-black"></div>
-              <p className="max-w-xl text-lg text-neutral-700 sm:text-xl md:text-2xl">
+              <div className="mb-6 h-px w-24 bg-black dark:bg-white"></div>
+              <p className="max-w-xl text-lg text-neutral-700 sm:text-xl md:text-2xl dark:text-neutral-300">
                 Junior MERN-stack Developer
                 <br className="hidden sm:block" />& Open Source Contributor
               </p>
             </div>
 
-            <p className="max-w-2xl text-base leading-relaxed text-neutral-600 sm:text-lg">
+            <p className="max-w-2xl text-base leading-relaxed text-neutral-600 sm:text-lg dark:text-neutral-400">
               Building elegant, functional web experiences with clean code and
               minimal design principles. Crafting tools that developers love to
               use.
@@ -42,13 +42,13 @@ export default function Hero() {
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
               <HeroButton
                 sectionName="projects"
-                className="border border-black px-8 py-3 text-center transition-all duration-300 pointer-fine:hover:bg-black pointer-fine:hover:text-white"
+                className="border border-black px-8 py-3 text-center duration-150 dark:border-white pointer-fine:hover:bg-black pointer-fine:hover:text-white dark:pointer-fine:hover:bg-white dark:pointer-fine:hover:text-black"
               >
                 View Work
               </HeroButton>
               <HeroButton
                 sectionName="package"
-                className="border border-neutral-300 px-8 py-3 text-center transition-all duration-300 pointer-fine:hover:border-black"
+                className="border border-neutral-300 px-8 py-3 text-center duration-150 dark:border-neutral-700 pointer-fine:hover:border-black dark:pointer-fine:hover:border-white"
               >
                 Explore Package
               </HeroButton>
@@ -58,10 +58,10 @@ export default function Hero() {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               {/* Decorative frame */}
-              <div className="absolute -top-4 -left-4 h-full w-full border border-neutral-300"></div>
+              <div className="absolute -top-4 -left-4 h-full w-full border border-neutral-300 dark:border-neutral-700"></div>
 
               {/* Profile image container */}
-              <div className="relative h-64 w-64 overflow-hidden border-2 border-black bg-white sm:h-72 sm:w-72">
+              <div className="relative h-64 w-64 overflow-hidden border-2 border-black bg-white sm:h-72 sm:w-72 dark:border-white dark:bg-black">
                 <Image
                   src="/me-no-bg.png"
                   alt="Riyad avatar"
@@ -74,10 +74,10 @@ export default function Hero() {
 
                 {/* Diagonal lines pattern overlay */}
                 <div
-                  className="absolute inset-0 opacity-[0.03]"
+                  className="absolute inset-0 opacity-[0.04] [--black:black] dark:[--black:white]"
                   style={{
                     backgroundImage:
-                      'repeating-linear-gradient(45deg, black 0, black 2px, transparent 2px, transparent 10px)',
+                      'repeating-linear-gradient(45deg, var(--black) 0, var(--black) 2px, transparent 2px, transparent 15px)',
                   }}
                 ></div>
               </div>

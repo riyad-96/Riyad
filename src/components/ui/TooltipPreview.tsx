@@ -8,13 +8,15 @@ export default function TooltipPreview() {
   const positions: positionType = ['top', 'bottom', 'right'];
 
   return (
-    <div className="mt-6 border-t border-neutral-900 pt-4 text-neutral-300">
-      <p className="mb-3 text-xs text-neutral-600">Hover to preview:</p>
+    <div className="mt-6 border-t border-neutral-900 pt-4 text-neutral-300 dark:border-neutral-100 dark:text-neutral-700">
+      <p className="mb-3 text-xs text-neutral-600 dark:text-neutral-400">
+        Hover to preview:
+      </p>
       <div className="flex gap-3">
         {positions.map((position) => (
           <Tooltip
             content={
-              <div className="bg-white px-3 py-1.5 text-sm text-black">
+              <div className="bg-white px-3 py-1.5 text-sm text-black dark:bg-black dark:text-white">
                 Tooltip
               </div>
             }
@@ -22,7 +24,7 @@ export default function TooltipPreview() {
             position={position}
             hideOnTouch={false}
           >
-            <button className="border border-neutral-800 px-4 py-1.5 text-xs capitalize transition-colors pointer-fine:hover:bg-neutral-900">
+            <button className="border border-neutral-800 px-4 py-1.5 text-xs capitalize dark:border-neutral-200 pointer-fine:hover:bg-neutral-900 dark:pointer-fine:hover:bg-neutral-100">
               {position}
             </button>
           </Tooltip>

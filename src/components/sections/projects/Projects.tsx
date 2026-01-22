@@ -78,12 +78,12 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen bg-white scroll-mt-17.5 px-4 py-20 md:px-6"
+      className="min-h-screen scroll-mt-17.5 bg-white px-4 py-20 md:px-6 dark:bg-neutral-950"
     >
       <div className="mx-auto w-full max-w-6xl">
         <div className="mb-16">
           <h2 className="mb-6 text-4xl tracking-tight sm:text-5xl">Projects</h2>
-          <p className="max-w-2xl text-base leading-relaxed text-neutral-600 sm:text-lg">
+          <p className="max-w-2xl text-base leading-relaxed text-neutral-600 sm:text-lg dark:text-neutral-400">
             A selection of recent work demonstrating MERN-stack capabilities,
             clean architecture, and user-focused solutions.
           </p>
@@ -93,12 +93,12 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="group border border-neutral-200 bg-white p-6 transition-all duration-150 pointer-fine:hover:border-black sm:p-8"
+              className="group border border-neutral-200 bg-white p-6 duration-150 sm:p-8 dark:border-neutral-800 dark:bg-black pointer-fine:hover:border-black dark:pointer-fine:hover:border-white"
             >
               <div className="space-y-4">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                   <div className="flex items-start gap-4">
-                    <span className="text-3xl font-light text-neutral-300 transition-colors pointer-fine:group-hover:text-black sm:text-4xl">
+                    <span className="text-3xl font-light text-neutral-300 sm:text-4xl dark:text-neutral-700 pointer-fine:group-hover:text-black dark:pointer-fine:group-hover:text-white">
                       {String(index + 1).padStart(2, '0')}
                     </span>
                     <div className="flex-1">
@@ -107,12 +107,12 @@ export default function Projects() {
                       </h3>
                     </div>
                   </div>
-                  <span className="text-sm text-neutral-400 sm:ml-4">
+                  <span className="text-sm text-neutral-400 sm:ml-4 dark:text-neutral-500">
                     {project.year}
                   </span>
                 </div>
 
-                <p className="text-sm leading-relaxed text-neutral-600 sm:text-base">
+                <p className="text-sm leading-relaxed text-neutral-600 sm:text-base dark:text-neutral-400">
                   {project.description}
                 </p>
 
@@ -120,7 +120,7 @@ export default function Projects() {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="bg-black px-3 py-1.5 text-xs text-white sm:text-sm md:px-4"
+                      className="bg-black px-3 py-1.5 text-xs text-white sm:text-sm md:px-4 dark:bg-white dark:text-black"
                     >
                       {tech}
                     </span>
@@ -132,17 +132,16 @@ export default function Projects() {
                     url={project.liveUrl}
                     isStatic={true}
                     imageSrc={project.imageSrc}
+                    className="flex items-center border border-black px-4 py-2 text-sm duration-150 *:pointer-events-none dark:border-white pointer-fine:hover:bg-black pointer-fine:hover:text-white dark:pointer-fine:hover:bg-white dark:pointer-fine:hover:text-black"
                   >
-                    <span className="group/link pointer-events-none inline-flex items-center gap-2 border border-black px-6 py-2 text-sm transition-all duration-300 pointer-fine:hover:bg-black pointer-fine:hover:text-white">
-                      View Live
-                      <ArrowUpRight className="h-4 w-4" />
-                    </span>
+                    <span className="">View Live</span>
+                    <ArrowUpRight className="h-4 w-4" />
                   </LinkPreview>
 
                   <a
                     href={project.repoUrl}
                     target="_blank"
-                    className="group/repo flex w-12.5 items-center overflow-x-hidden border border-black text-sm transition-[color,background-color,width] duration-[150ms,150ms,300ms] pointer-fine:hover:bg-black pointer-fine:hover:text-white pointer-fine:hover:w-33.5"
+                    className="group/repo flex w-12.5 items-center overflow-x-hidden border border-black text-sm transition-[width] duration-300 dark:border-white pointer-fine:hover:w-33.5 pointer-fine:hover:bg-black pointer-fine:hover:text-white dark:pointer-fine:hover:bg-white dark:pointer-fine:hover:text-black"
                   >
                     <span className="px-3">
                       <GithubSvg size="24" />
