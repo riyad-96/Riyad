@@ -9,7 +9,7 @@ export default function CopyButton({ text }: { text: string }) {
   return (
     <button
       onClick={() => copy(text)}
-      className="flex w-12 items-center justify-center border-l border-neutral-200 dark:border-neutral-800 text-sm transition-colors duration-150 pointer-fine:hover:bg-black dark:pointer-fine:hover:bg-white pointer-fine:hover:text-white dark:pointer-fine:hover:text-black sm:w-16"
+      className="flex w-12 items-center justify-center border-l border-neutral-200 text-sm transition-colors sm:w-16 dark:border-neutral-800 pointer-fine:hover:bg-black pointer-fine:hover:text-white dark:pointer-fine:hover:bg-white dark:pointer-fine:hover:text-black"
       title="Copy to clipboard"
     >
       {isCopied ? <Check size="16" /> : <Copy size="16" />}

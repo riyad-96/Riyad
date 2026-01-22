@@ -42,13 +42,13 @@ export default function Hero() {
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
               <HeroButton
                 sectionName="projects"
-                className="border border-black px-8 py-3 text-center duration-150 dark:border-white pointer-fine:hover:bg-black pointer-fine:hover:text-white dark:pointer-fine:hover:bg-white dark:pointer-fine:hover:text-black"
+                className="border border-black px-8 py-3 text-center dark:border-white pointer-fine:hover:bg-black pointer-fine:hover:text-white dark:pointer-fine:hover:bg-white dark:pointer-fine:hover:text-black"
               >
                 View Work
               </HeroButton>
               <HeroButton
                 sectionName="package"
-                className="border border-neutral-300 px-8 py-3 text-center duration-150 dark:border-neutral-700 pointer-fine:hover:border-black dark:pointer-fine:hover:border-white"
+                className="border border-neutral-300 px-8 py-3 text-center dark:border-neutral-700 pointer-fine:hover:border-black dark:pointer-fine:hover:border-white"
               >
                 Explore Package
               </HeroButton>

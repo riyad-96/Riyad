@@ -93,7 +93,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="group border border-neutral-200 bg-white p-6 duration-150 sm:p-8 dark:border-neutral-800 dark:bg-black pointer-fine:hover:border-black dark:pointer-fine:hover:border-white"
+              className="group border border-neutral-200 bg-white p-6 sm:p-8 dark:border-neutral-800 dark:bg-black pointer-fine:hover:border-black dark:pointer-fine:hover:border-white"
             >
               <div className="space-y-4">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
@@ -132,7 +132,7 @@ export default function Projects() {
                     url={project.liveUrl}
                     isStatic={true}
                     imageSrc={project.imageSrc}
-                    className="flex items-center border border-black px-4 py-2 text-sm duration-150 *:pointer-events-none dark:border-white pointer-fine:hover:bg-black pointer-fine:hover:text-white dark:pointer-fine:hover:bg-white dark:pointer-fine:hover:text-black"
+                    className="flex items-center border border-black px-4 py-2 text-sm *:pointer-events-none dark:border-white pointer-fine:hover:bg-black pointer-fine:hover:text-white dark:pointer-fine:hover:bg-white dark:pointer-fine:hover:text-black"
                   >
                     <span className="">View Live</span>
                     <ArrowUpRight className="h-4 w-4" />
@@ -146,7 +146,7 @@ export default function Projects() {
                     <span className="px-3">
                       <GithubSvg size="24" />
                     </span>
-                    <span className="-ml-1 text-nowrap opacity-0 transition-opacity duration-150 pointer-fine:group-hover/repo:opacity-100">
+                    <span className="-ml-1 text-nowrap opacity-0 transition-opacity pointer-fine:group-hover/repo:opacity-100">
                       {' '}
                       Repository
                     </span>

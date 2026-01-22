@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 right-0 left-0 z-50 flex h-17.5 items-center border-b bg-white/90 px-4 backdrop-blur-sm duration-150 md:px-6 dark:bg-black/90 ${
+      className={`fixed top-0 right-0 left-0 z-50 flex h-17.5 items-center border-b bg-white/90 px-4 backdrop-blur-sm md:px-6 dark:bg-black/90 ${
         scrolled
           ? 'border-neutral-200 dark:border-neutral-800'
           : 'border-transparent'

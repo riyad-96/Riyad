@@ -52,7 +52,7 @@ export default function Package() {
   return (
     <section
       id="package"
-      className="min-h-screen scroll-mt-17.5 bg-black px-4 py-20 text-white md:px-6 dark:bg-white dark:text-black"
+      className="min-h-screen scroll-mt-17.5 bg-black px-4 py-20 text-white md:px-6 dark:text-black dark:bg-white"
     >
       <div className="mx-auto w-full max-w-6xl">
         <div className="mb-16">

@@ -14,7 +14,7 @@ export default function ToastPreview() {
           onClick={() =>
             toast.custom(
               (dismiss) => (
-                <div className="flex items-center gap-2 bg-white px-3 py-2 outline dark:bg-black">
+                <div className="flex items-center gap-2 border border-neutral-300 bg-white px-3 py-2 dark:border-neutral-700 dark:bg-black">
                   <span className="text-sm">Toast Message</span>
                   <button
                     onClick={dismiss}
