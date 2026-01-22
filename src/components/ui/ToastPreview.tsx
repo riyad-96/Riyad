@@ -26,8 +26,7 @@ export default function ToastPreview() {
               ),
               {
                 duration: 5000,
-                position:
-                  window.innerWidth <= 500 ? 'top-right' : 'bottom-left',
+                position: 'bottom-left',
               },
             )
           }

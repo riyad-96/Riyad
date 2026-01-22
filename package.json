@@ -11,7 +11,7 @@
   "dependencies": {
     "@radix-ui/react-hover-card": "^1.1.15",
     "clsx": "^2.1.1",
-    "kitzo": "^2.3.39",
+    "kitzo": "^2.3.42",
     "lucide-react": "^0.562.0",
     "motion": "^12.27.5",
     "next": "16.1.4",

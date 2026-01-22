@@ -8,6 +8,7 @@
 
 * {
   scrollbar-width: thin;
+  backface-visibility: hidden;
 }
 
 .dark {
