@@ -3,16 +3,15 @@
 export default function NavBtn({
   text,
   onClick,
+  className,
 }: {
   text: string;
   onClick: () => void;
+  className?: string;
 }) {
   return (
-    <button
-      onClick={onClick}
-      className="group grid place-items-center px-2 py-1 text-xs uppercase md:px-3.5 md:text-sm"
-    >
-      <span className="relative overflow-hidden leading-4">
+    <button onClick={onClick} className={`group ${className}`}>
+      <span className="group relative flex overflow-hidden">
         <span className="absolute">
           {text.split('').map((t, i) => (
             <span
