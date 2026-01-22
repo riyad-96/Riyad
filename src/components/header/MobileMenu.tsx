@@ -59,7 +59,7 @@ export default function MobileMenu() {
       </div>
 
       <nav
-        className={`dropdown-menu absolute top-1/1 right-0 grid origin-top-right border border-t border-neutral-300 transition-[scale,opacity] bg-white py-2 dark:border-neutral-700 ${isDropdownOpen ? 'scale-100 opacity-100' : 'pointer-events-none scale-80 opacity-0'}`}
+        className={`dropdown-menu absolute top-1/1 right-0 grid origin-top-right border border-t border-neutral-300 transition-[scale,opacity] bg-white dark:bg-neutral-950 py-2 dark:border-neutral-700 ${isDropdownOpen ? 'scale-100 opacity-100' : 'pointer-events-none scale-80 opacity-0'}`}
       >
         <NavBtn
           className="flex justify-end px-4 py-1 text-sm uppercase"

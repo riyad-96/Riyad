@@ -1,6 +1,6 @@
 import About from '@/components/sections/about/About';
 import Contact from '@/components/sections/contact/Contact';
-import Header from '@/components/sections/header/Header';
+import Header from '@/components/header/Header';
 import Hero from '@/components/sections/hero/Hero';
 import Package from '@/components/sections/package/Package';
 import Projects from '@/components/sections/projects/Projects';
