@@ -5,9 +5,9 @@ export default function Contact() {
   const contactLinks = [
     {
       label: 'Email',
-      value: 'riyadofficial.ide@gmail.com',
-      href: 'mailto:riyadofficial.ide@gmail.com',
-      copyValue: 'riyadofficial.ide@gmail.com',
+      value: 'riyadofficial.dev@gmail.com',
+      href: 'mailto:riyadofficial.dev@gmail.com',
+      copyValue: 'riyadofficial.dev@gmail.com',
       icon: Mail,
     },
     {
@@ -19,9 +19,9 @@ export default function Contact() {
     },
     {
       label: 'LinkedIn',
-      value: 'linkedin.com/in/riyadofficial-webdev',
-      href: 'https://www.linkedin.com/in/riyadofficial-webdev/',
-      copyValue: 'https://www.linkedin.com/in/riyadofficial-webdev/',
+      value: 'linkedin.com/in/riyadofficial-dev',
+      href: 'https://www.linkedin.com/in/riyadofficial-dev/',
+      copyValue: 'https://www.linkedin.com/in/riyadofficial-dev/',
       icon: Linkedin,
     },
   ];
